@@ -1,2 +1,2 @@
 # java_study
-konwage of java
+something of java
