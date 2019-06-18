@@ -22,7 +22,7 @@
 /.nb-gradle/
 
 target/
-bin/
+
 src/test/java/com/founder/stckservice/SomeThingTest.java
 pom.xml.tag
 pom.xml.releaseBackup
