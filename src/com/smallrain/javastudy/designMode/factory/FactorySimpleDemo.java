@@ -1,5 +1,10 @@
 package com.smallrain.javastudy.designMode.factory;
 
+import com.smallrain.javastudy.designMode.factory.interfaces.Car;
+import com.smallrain.javastudy.designMode.factory.model.BigCar;
+import com.smallrain.javastudy.designMode.factory.model.MiddleCar;
+import com.smallrain.javastudy.designMode.factory.model.SmallCar;
+
 /**
  * 设计模式 - 工厂模式  - 简单工厂模式
  * 
@@ -24,8 +29,8 @@ package com.smallrain.javastudy.designMode.factory;
 
 public class FactorySimpleDemo {
 
-  public static void main(String[] args) {
-
+  public static void test() {
+    System.out.println("\n开始简单工厂模式的测试。。。。");
     Car big = CarFactory.getCar(0);
     big.run();
     Car mid = CarFactory.getCar(1);
@@ -33,6 +38,7 @@ public class FactorySimpleDemo {
     Car small = CarFactory.getCar(2);
     small.run();
 
+    System.out.println("\n使用反射：");
     //使用反射
     Car big2 = (BigCar)CarFactory2.getCar(BigCar.class);
     big2.run();
@@ -40,50 +46,12 @@ public class FactorySimpleDemo {
     mid2.run();
     Car small2 = (SmallCar)CarFactory2.getCar(SmallCar.class);
     small2.run();
+    
+    System.out.println("简单工厂模式的测试结束。。。。");
   }
 
 }
 
-/**
- * 首先得 得有抽象角色 ，定义公共借口
- *
- */
-interface Car {
-  public void run();
-}
-
-/**
- * 然后 定义一批具体产品
- */
-class BigCar implements Car {
-
-  @Override
-  public void run() {
-    // TODO Auto-generated method stub
-    System.out.println("大车要走了");
-  }
-
-}
-
-class MiddleCar implements Car {
-
-  @Override
-  public void run() {
-    // TODO Auto-generated method stub
-    System.out.println("中等车要走了");
-  }
-
-}
-
-class SmallCar implements Car {
-
-  @Override
-  public void run() {
-    // TODO Auto-generated method stub
-    System.out.println("小车要走了");
-  }
-
-}
 
 /**
  * 最后定义工厂类，使用静态方法和不同参数去创建子类
@@ -126,3 +94,4 @@ class CarFactory2 {
   }
 
 }
+  

@@ -1,6 +1,7 @@
 package com.smallrain.javastudy.designMode.factory;
 
 /**
+ * @link https://segmentfault.com/a/1190000015050674
  * 设计模式 - 工厂模式
  * 定义：
  *   在基类中定义创建对象的一个接口，让子类决定实例化哪个类。工厂方法让一个类的实例化延迟到子类中进行。
@@ -19,4 +20,11 @@ package com.smallrain.javastudy.designMode.factory;
  * @author wangying.dz3
  *
  */
-public interface FactoryIndex { }
+public class FactoryIndex {
+  
+  public static void main(String [] args) {
+    FactoryMethodDemo.test();
+    FactorySimpleDemo.test();
+  }
+  
+}
